@@ -1,0 +1,27 @@
+h1 {
+	text-align: center;
+	text-transform: bold;
+}
+td {
+	width: 100px;
+	height: 100px;
+	margin: 100px;
+}
+.hello {
+	border-bottom: 1px solid black;
+}
+.okay {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.oki {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+#special {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+table {
+	margin:auto;
+}

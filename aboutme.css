@@ -1,0 +1,17 @@
+body
+{
+	background: pink;
+	/*background:url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+}
+div	{
+	background:#3498db;
+}
+p {
+	color:rgb(255,255,255);
+	border: 1px solid red;
+}
+#special	{
+	color: purple;
+}

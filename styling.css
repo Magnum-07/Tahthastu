@@ -1,0 +1,80 @@
+#inlineFormInputName,#inlineFormCustomSelect,#DLState,#DLState1,#dropdown{
+    border: 1px solid #00B3CC ;
+}
+.hide {
+    display: none;
+  }
+  p {
+    font-weight: bold;
+  }
+.container-fluid{
+    background-color: #fff;
+}
+
+.fsbody,.fsform{
+    padding: 20px;
+}
+.fsform{
+    border-radius: 2em;
+}
+form{
+    display: block;
+    margin: auto;
+    display: table;
+    background-color: #fff ;
+}
+#headingblock{
+    background-color: rgb(196, 189, 189);
+    margin: auto;
+    display: table;
+    width: 50vw;
+    text-align: center;
+    height: 3vw;
+    font-size: 2em;
+    color: black;
+    border-radius: 1vw;
+}
+li{
+    text-indent: 0.5em;
+    list-style-type: none;
+}
+.Fileenter{
+    padding: 10px;
+    border-radius: 2em;
+    background: #2E3092;
+    display: table;
+    color: #fff;
+     }
+.Fileenter:hover{
+    background-color: rgb(65, 66, 145);
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
+#button1{
+    background-color: #2E3092;
+    color: white;
+}
+#button1:hover{
+    background-color: rgb(65, 66, 145);
+    cursor: pointer;
+}
+#add_form_field{
+    background-color: #2E3092;
+    color: white;
+    border-radius: 1em;
+    text-indent: 5px;
+}
+#add_form_field:hover{
+    background-color: rgb(65, 66, 145);
+    cursor: pointer;
+}
+.delete{
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.delete:hover{
+    text-decoration: none;
+}

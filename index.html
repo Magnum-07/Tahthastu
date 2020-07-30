@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<title>Offer-Publish</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<html>
+    <body>
+        <div class="container-fluid">
+            <div class="fsbody">
+            <form class="fsform">
+                    <span id="headingblock">Publish Offer</span>
+                    <br>
+                    <div class="row">
+                    <label id="text1" style="text-indent: 15px;">Use Existing Offer?</label>
+                    <br>
+                    <div class="col">
+                        <input type="radio" name="tab" value="igottwo" onclick="show2();" />
+                        Yes
+                        </div>
+                        <div class="col">
+                        <input type="radio" name="tab" value="igotnone" onclick="show1();" />
+                        No
+                    </div>
+                    </div>
+                    <div id="div1" class="hide">
+                        <br>
+                        <label>Offer Id</label>
+                      <input type="text" class="form-control" id="inlineFormInputName">
+                      </div>
+                    <br>
+                    <span id="offerheading">Offer Heading</span><br>
+                    <input type="text" class="form-control" id="inlineFormInputName">
+                    <br>
+                    <div class="row">
+                    <span id="text2"style="text-indent: 15px;">Linked with card?</span><br>
+                        <div class="col col-auto">
+                            <input type="radio" id="checkbox-round" name="tab" value="igottwo" onclick="show4();" />
+                            <label>Yes</label> 
+                        </div>
+                        <div class="col col-auto">
+                            <input type="radio" id="checkbox-round" name="tab" value="igotnone" onclick="show3();" />
+                            <label>No</label> 
+                        </div>
+                    </div>
+                    <div id="div2" class="hide">
+                        <br>
+                        <label>Banks</label>
+                        <select class="custom-select mr-sm-2" id='dropdown'>
+                        </select>
+                        <br>
+                        <label>Card Type</label>
+                        <select class="custom-select mr-sm-2" id='dropdown'>
+                        </select>
+                        <br>
+                        <label>Card Name</label>
+                        <select class="custom-select mr-sm-2" id='dropdown'>
+                        </select>
+                        <br>
+                        </div>
+                    <br>
+                    <span>Category</span>
+                    <br>
+                    
+            <select class="custom-select mr-sm-2" id="OfferCategoryID">
+                <option value="0">Select Category</option>
+            </select>
+                    <br>
+                      <br>
+                      <span id="text3">Sub-Category</span>
+                      <br>
+                    <select class="custom-select mr-sm-2" id="DLState1">
+                      </select>
+                      <br>
+                      <br>
+                      <span id="text3">Merchant Website</span>
+                    <br>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="red">Others</option>
+                      </select>
+                      <br>
+                      <br>
+                      <div class="red box1">
+                      <span id="text6">Merchant Name</span>
+                      <input type="text" class="form-control" id="inlineFormInputName">
+                      <br>
+                      <span id="text6">Website URL</span>
+                      <input type="text" class="form-control" id="inlineFormInputName">
+                      <br>
+                      </div>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div class="container1">
+        <div>
+            <p contentEditable=True>Editable text Here</p>
+        <div><input type="text" name="mytext[]" class="form-control" id="inlineFormInputName"></div>
+        </div>
+    </div>
+    <br>
+    <button class="btn" id="add_form_field">Add New Field &nbsp; 
+        <span style="font-size:16px; font-weight:bold;">+ </span>
+      </button>
+    <script>
+        $(document).ready(function() {
+    var max_fields = 10;
+    var wrapper = $(".container1");
+    var add_button = $("#add_form_field");
+
+    var x = 1;
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        if (x < max_fields) {
+            x++;
+            $(wrapper).append('<div><br><p contentEditable=True>Editable text Here</p><br><input type="text" name="mytext[]" class="form-control" id="inlineFormInputName"><a href="#" class="delete">Delete</a></div>'); //add input box
+        } else {
+            alert('You Reached the limits')
+        }
+    });
+
+    $(wrapper).on("click", ".delete", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+        x--;
+    })
+});
+    </script>
+    <br>
+    <br>
+    <span id="offerheading">Offer Details</span><br>
+                    <input type="text" class="form-control" id="inlineFormInputName">
+                    <br>
+                    <div class="row" style="text-indent: 15px;">
+                    <label id="text1">Mode of Benefit</label>
+                    <br>
+                        <div class="col col-auto">
+                            <input type="radio" id="checkbox-round">
+                            <label>Discount</label> 
+                        </div>
+                        <div class="col col-auto">
+                            <input type="radio" id="checkbox-round">
+                            <label>Cashback</label> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                    <label id="text1" style="text-indent: 15px;">Type of Benefit</label>
+                    <br>
+                        <div class="col col-auto">
+                            <input type="radio" id="checkbox-round">
+                            <label>%</label> 
+                        </div>
+                        <div class="col col-auto">
+                            <input type="radio" id="checkbox-round">
+                            <label>Flat</label> 
+                        </div>
+                    </div>
+                    <br>
+                    <span>Value</span>
+                    <br>
+                    <input type="number" class="form-control" id="inlineFormInputName">
+                    <br>
+                    <div class="row">
+                    <div class="col col-auto">
+                        <label>Offer start Date</label>
+                        <input type="date" name="offer" max="3000-12-31" 
+                               min="1000-01-01" class="form-control" style="display: table; margin: auto;" id="inlineFormInputName">
+                       </div>
+                       <div class="col col-auto">
+                        <label >Offer End Date</label>
+                        <input type="date" name="offer" min="1000-01-01"
+                               max="3000-12-31" class="form-control" id="inlineFormInputName">
+                       </div>
+                       </div>
+                       <br>
+                    <div class="days">
+                    <div class="row">
+                        <div class="col col-auto">
+                            <input type="checkbox" id="checkbox-round">
+                            <label>Sun</label> 
+                        </div>
+                        <div class="col col-auto">
+                            <input type="checkbox" id="checkbox-round">
+                            <label>Mon</label> 
+                            </div>
+                            <div class="col col-auto">
+                                <input type="checkbox" id="checkbox-round">
+                                <label>Tue</label> 
+                            </div>
+                            <div class="col col-auto">
+                                <input type="checkbox" id="checkbox-round">
+                                <label>Wed</label>
+                                </div> 
+                                <div class="col col-auto">
+                                    <input type="checkbox" id="checkbox-round">
+                                    <label>Thur</label> 
+                                </div>
+                                <div class="col col-auto">
+                                    <input type="checkbox" id="checkbox-round">
+                                    <label>Fri</label> 
+                                </div>
+                                    <div class="col col-auto">
+                                        <input type="checkbox" id="checkbox-round">
+                                        <label>Sat</label> 
+                                    </div>
+                    </div>
+                    </div>
+                    <br>
+                    <span>Min Amount</span>
+                    <br>
+                    <input type="number" class="form-control" id="inlineFormInputName">
+                    <br>
+                    <span>Max Benefit</span>
+                    <br>
+                    <input type="number" class="form-control" id="inlineFormInputName">
+                    <br>
+                    <span id="text6">Offer Source URL</span>
+                      <input type="text" class="form-control" id="inlineFormInputName">
+                      <br>
+                      <label class="Fileenter"> Upload your File
+                          <i class="fa fa-lg fa-cloud-upload"></i>
+                        <input type="file" size="60" >
+                        </label>   
+                        <br>
+                        <label>Expected Incentive</label>
+                        <input type="number" class="form-control" id="inlineFormInputName">
+                        <br> 
+                        <label>Max number of times the offer can be fulfilled by Payer</label>
+                        <input type="number" class="form-control" id="inlineFormInputName">
+                        <br> 
+                        <div class="text-center">
+                        <button type="submit" class="btn" style="width: 8em;" id="button1" onclick="submitOffer()">Submit</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script type="text/javascript">
+
+    process();
+
+    var jsonData={};
+    var listItems;
+
+    async function process()
+    {
+        var apiUrl="https://script.google.com/macros/s/AKfycbwz1wHDs2Hfdj8fbrWp4aPE9T19EILSfNR-WdpXWZAsGdCKL5E/exec?action=get&stmtQuery=call proc_get_OfferCategory();";
+    	const req = {
+        	"method": "GET",
+    	    "mode": "cors"
+	    };
+
+	    const resp =  await fetch(apiUrl, req)
+               .then(function(response){return response.text();}); 
+        /*var doc=new DOMParser().parseFromString(resp, "text/html"); */  /* To be checked later with actual ordre value */
+
+
+        console.log(resp);
+        /*var string='{"Table":[{"OfferCategory_ID":"1","OfferCategory_Name":"Food"},{"OfferCategory_ID":"2","OfferCategory_Name":"Travel"},{"OfferCategory_ID":"3","OfferCategory_Name":"Entertainment"},{"OfferCategory_ID":"4","OfferCategory_Name":"Shopping"},{"OfferCategory_ID":"5","OfferCategory_Name":"Health"},{"OfferCategory_ID":"6","OfferCategory_Name":"BillPayment"},{"OfferCategory_ID":"7","OfferCategory_Name":"Recharge"},{"OfferCategory_ID":"8","OfferCategory_Name":"GiftVoucher"}]}'*/
+        jsonData = JSON.parse(resp);
+
+        for (var i = 0; i < jsonData.Table.length; i++) {
+             listItems += "<option value='" + jsonData.Table[i].OfferCategory_ID + "'>" + jsonData.Table[i].OfferCategory_Name + "</option>";
+         }
+ 
+         $("#OfferCategoryID").html(listItems);
+
+
+    }
+
+     $(document).ready(function () {
+     listItems = '<option selected="selected" value="0">Select Category</option>';
+ 
+     });
+     $(document).ready(function () {
+         var listItems = '<option selected="selected" value="0">- Select -</option>';
+ 
+      for (var i = 0; i < jsonData.Table.length; i++) {
+             listItems += "<option value='" + jsonData.Table[i].stateid + "'>" + jsonData.Table[i].OfferCategory_Name + "</option>";
+         }
+ 
+         $("#DLState1").html(listItems);
+     });
+
+     function show1(){
+  document.getElementById('div1').style.display ='none';
+}
+function show2(){
+  document.getElementById('div1').style.display = 'block';
+}
+function show3(){
+  document.getElementById('div2').style.display ='none';
+}
+function show4(){
+  document.getElementById('div2').style.display = 'block';
+}
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box1").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box1").hide();
+            }
+        });
+    }).change();
+});
+
+
+function submitOffer()
+{
+    var stmtQuery="";
+    var pCategoryID = document.getElementById('OfferCategoryID').value;
+    stmtQuery+="Call spInsertOfferV2(";
+    stmtQuery+=pCategoryID+",";
+
+    sendOffer(stmtQuery);
+
+    console.log(stmtQuery);
+
+}
+
+
+async function sendOffer(stmtQuery)
+    {
+        var apiUrl="https://script.google.com/macros/s/AKfycbwz1wHDs2Hfdj8fbrWp4aPE9T19EILSfNR-WdpXWZAsGdCKL5E/exec?action=get&stmtQuery=";
+        apiUrl+=stmtQuery;
+    	const req = {
+        	"method": "GET",
+    	    "mode": "cors"
+	    };
+
+	    const resp =  await fetch(apiUrl, req)
+               .then(function(response){return response.text();}); 
+        /*var doc=new DOMParser().parseFromString(resp, "text/html"); */  /* To be checked later with actual ordre value */
+        console.log(resp);
+    }
+ 
+  </script>
+</body>
+</html>
